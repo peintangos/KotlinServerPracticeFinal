@@ -1,2 +1,2 @@
-insert into kotlinserver2.User (name,pass) values ("t","$2a$10$JQcWNnqKegzY6AV4Ws/Q2ulSaLEs1oSgiNi97f0Qpr1nNiWE.n.CO")
-insert into kotlinserver2.User (name,pass) values ("tt","$2a$10$JQcWNnqKegzY6AV4Ws/Q2ulSaLEs1oSgiNi97f0Qpr1nNiWE.n.CO")
+insert into kotlinserver2.User (name,pass,is_deleted,created_time) values ("t","$2a$10$JQcWNnqKegzY6AV4Ws/Q2ulSaLEs1oSgiNi97f0Qpr1nNiWE.n.CO",false,"2012-12-12")
+insert into kotlinserver2.User (name,pass,is_deleted,created_time) values ("tt","$2a$10$JQcWNnqKegzY6AV4Ws/Q2ulSaLEs1oSgiNi97f0Qpr1nNiWE.n.CO",false,"2012-12-12")

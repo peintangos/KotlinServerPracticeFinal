@@ -26,7 +26,7 @@ class CustomAuthenticationFailureHandler:SimpleUrlAuthenticationFailureHandler()
         response?.contentType = MediaType.APPLICATION_JSON.toString()
         response?.characterEncoding = StandardCharsets.UTF_8.toString()
         val writer = response?.writer
-        jacksonObjectMapper().writeValue(writer, ErrorRespMsg("エラー",HttpStatus.UNAUTHORIZED,"dd"))
+        jacksonObjectMapper().writeValue(writer, ErrorRespMsg("エラー",HttpStatus.UNAUTHORIZED,"ユーザー名またはパスワードが間違っています"))
         writer?.flush()
     }
 }

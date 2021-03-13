@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface UserRepository:CrudRepository<UserDao,String> {
+interface UserRepository:CrudRepository<UserDao,Int> {
     fun findByName(name:String?): UserDao?
+    fun existsByName(name:String?):Boolean
 }
