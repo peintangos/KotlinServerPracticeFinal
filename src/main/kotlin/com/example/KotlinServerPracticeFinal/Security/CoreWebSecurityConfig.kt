@@ -6,12 +6,14 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.security.web.AuthenticationEntryPoint
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint
 
-@ConditionalOnWebApplication
-@Configuration
-class CoreWebSecurityConfig {
-    @Bean("authenticationEntryPoint")
-    fun authenticationEntryPoint():AuthenticationEntryPoint{
-        return Http403ForbiddenEntryPoint()
-    }
+//@ConditionalOnWebApplication
+//@Configuration
+//class CoreWebSecurityConfig {
+//    以下の
+//    @Bean("authenticationEntryPoint")
+//    fun authenticationEntryPoint():CustomAuthenticationEntryPoint{
+//        println("アクセエラー")
+//        return CustomAuthenticationEntryPoint()
+//    }
 
-}
+//}

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
+//このクラスに@Componetをつけると、AuthenticationMangerを特定してください。というエラーが出るのでnewする。
 class CustomAuthenticationFilter: UsernamePasswordAuthenticationFilter() {
     override fun attemptAuthentication(request: HttpServletRequest?, response: HttpServletResponse?): Authentication {
         if (!request!!.method.equals("POST")){

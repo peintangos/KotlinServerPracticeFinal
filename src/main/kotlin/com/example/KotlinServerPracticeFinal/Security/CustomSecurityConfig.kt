@@ -30,8 +30,13 @@ class CustomSecurityConfig:WebSecurityConfigurerAdapter() {
         customAuthenticationFilter.setAuthenticationFailureHandler(customAuthenticationFailureHandler)
 //        customAuthenticationFilter.setSessionAuthenticationStrategy(sessionStrategy)
 
-        http!!.csrf().disable().authorizeRequests {
+        http!!.csrf().disable().exceptionHandling {
+            it.authenticationEntryPoint(CustomAuthenticationEntryPoint())
+            it.accessDeniedHandler(CustomAccessDeniedHandler())
+        }.
+        authorizeRequests {
             it.antMatchers("/login").permitAll()
+            it.antMatchers("/register").permitAll()
             it.anyRequest().authenticated()
         }.logout {
             it.logoutRequestMatcher(AntPathRequestMatcher("/logout","POST")).logoutSuccessHandler(logoutSuccessHandler)
